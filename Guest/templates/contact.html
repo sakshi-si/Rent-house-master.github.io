@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+<style>
+    p {
+        margin: 0.5rem 0!important;
+    }
+
+    @media only screen and (max-width: 600px) {
+        form {
+            text-align: center;
+        }
+    }
+    .team{
+        display: block;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 100%;
+        margin-top: 24px;
+        font-size: 30px;
+        height: 50px;
+    }
+    
+    .column{
+        width: 33%;
+        float: left;
+        margin-bottom: 16px;
+        padding: 0px 0px;
+    }
+    
+    .card{
+        padding: 20px;
+        height: 300px;
+        margin: 8px;
+        background-color: rgba(245, 222, 179, 0.39);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        border: 1px solid wheat;
+    }
+    
+.title{
+    margin: 10px;
+}
+
+.cardInfo{
+    margin: 10px;
+}
+
+.member-image{
+   width: 30%; 
+}
+
+.container{
+    padding: 0px 8px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+.containers::after, .row::after{
+    content:"";
+    clear: both;
+    display: table;
+}
+
+.button{
+    border: none;
+    outline: o;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
+}
+
+.button:hover{
+    background-color: #555;
+}
+ 
+</style>
+{% endblock %}
+</style>
+{% block body %} 
+<div class="w3-container w3-padding-large" style="margin-right: 5%; margin-left: 5%; margin-bottom: 1%; margin-top: 1%;">
+    {%if msg%}
+    <div class="alert alert-info" role="alert">
+       {{msg}}
+    </div>
+    {%endif%}
+   
+    
+    <h2 style="margin-left:10px;">Contact us</h2>
+
+    <hr class="w3-opacity">
+    <h2 class="team">Our Team</h2>
+
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    {% comment %} <img src="img/profile.png" alt="Not Loaded" class="member-image class = "cardInfo""> {% endcomment %}
+                    <div class="container">
+                    <h2>Akanksha Poriwade</h2>
+                    <p class="title">Member 1</p>
+                    <p class = "cardInfo">Something about us</p>
+                    <p class = "cardInfo">akankshap2k2@gmail.com</p>
+                    <p><button class="button"><a href="mailto:akankshap2k2@gmail.com">Contact</a></button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    {% comment %} <img src="img/profile.png" alt="Not Loaded" class="member-image class = "cardInfo""> {% endcomment %}
+                    <div class="container">
+                    <h2>Sakshi Singh</h2>
+                    <p class="title">Member 2</p>
+                    <p class = "cardInfo">Something about us</p>
+                    <p class = "cardInfo">sakshisingh13a@gmail.com</p>
+                    <p><button class="button"><a href="mailto:sakshisingh13a@gmail.com">Contact</a></button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    {% comment %} <img src="img/profile.png" alt="Not Loaded" class="member-image class = "cardInfo""> {% endcomment %}
+                    <div class="container">
+                    <h2>Neha Naik</h2>
+                    <p class="title">Member 3</p>
+                    <p class = "cardInfo">Something about us</p>
+                    <p class = "cardInfo">nnaik03052002@gmail.com</p>
+                    <p><button class="button"><a href="mailto:nnaik03052002@gmail.com">Contact</a></button></p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    {% comment %} <img src="img/profile.png" alt="Not Loaded" class="member-image class = "cardInfo""> {% endcomment %}
+                    <div class="container">
+                    <h2>Manthan Nikam</h2>
+                    <p class="title">Member 4</p>
+                    <p class = "cardInfo">Something about us</p>
+                    <p class = "cardInfo">manthannikam04@gmail.com</p>
+                    <p><button class="button"><a href="mailto:manthannikam04@gmail.com">Contact</a></button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+        <div class="w3-third w3-dark-grey">
+            <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+            <p>manthannikam04@gmail.com</p>
+        </div>
+        <div class="w3-third w3-teal">
+            <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+            <p>Mumbai, India</p>
+        </div>
+        <div class="w3-third w3-dark-grey">
+            <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+            <p>+91 9876543210</p>
+        </div>
+    </div>
+    <div class="w3-panel w3-large w3-center">
+       
+    </div>
+</div>
+{% endblock %}
